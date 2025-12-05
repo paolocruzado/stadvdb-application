@@ -7,6 +7,7 @@ import UpdateRecord from "./pages/UpdateRecord";
 import SearchRecords from "./pages/SearchRecords";
 import DeleteRecord from "./pages/DeleteRecord";
 import Reports from "./pages/Reports";
+import NodeStatus from "./pages/NodeStatus";
 
 // Navigation Link Component for consistent styling
 function NavLink({ to, children }) {
@@ -103,6 +104,7 @@ function App() {
             <NavLink to="/search">Search</NavLink>
             <NavLink to="/delete">Delete</NavLink>
             <NavLink to="/reports">Reports</NavLink>
+            <NavLink to="/status">Node Status</NavLink>
           </div>
         </nav>
 
@@ -114,6 +116,7 @@ function App() {
             <Route path="/search" element={<SearchRecords />} />
             <Route path="/delete" element={<DeleteRecord />} />
             <Route path="/reports" element={<Reports />} />
+            <Route path="/status" element={<NodeStatus />} />
             
             <Route path="*" element={
               <div style={styles.placeholder}>

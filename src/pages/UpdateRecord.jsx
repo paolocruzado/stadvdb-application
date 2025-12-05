@@ -63,7 +63,7 @@ export default function UpdateRecord() {
     try {
       const data = await fetchWithFailover("/api/webApp/update", {
         method: "POST",
-        body: JSON.stringify({ isolation: "READ COMMITTED", sql }),
+        body: JSON.stringify({ isolation: "REPEATABLE READ", sql }),
         headers: { "Content-Type": "application/json" }
       });
 
@@ -210,7 +210,6 @@ export default function UpdateRecord() {
 
       <div style={styles.container}>
         <div style={styles.header}>Update Record</div>
-        <div style={styles.subHeader}>Modify existing movie details in the Master Node</div>
 
         <form onSubmit={handleUpdate} style={styles.form}>
           

@@ -27,7 +27,7 @@ export default function DeleteRecord() {
         method: "POST",
         body: JSON.stringify({
           tconst: tconst.trim(),
-          isolation: "READ COMMITTED"
+          isolation: "REPEATABLE READ"
         }),
         headers: { "Content-Type": "application/json" },
       });
@@ -153,9 +153,6 @@ export default function DeleteRecord() {
 
       <div style={styles.container}>
         <div style={styles.header}>Delete Record</div>
-        <div style={styles.subHeader}>
-          Permanently remove data from Master and all Replicas
-        </div>
 
         <form onSubmit={handleDelete} style={styles.form}>
           <input

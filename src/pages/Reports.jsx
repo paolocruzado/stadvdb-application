@@ -127,7 +127,6 @@ export default function Reports() {
 
       <div style={styles.container}>
         <div style={styles.header}>Reports by Decade</div>
-        <div style={styles.subHeader}>Aggregated statistics across all distributed nodes</div>
 
         <div style={styles.actionContainer}>
           <button onClick={handleFetchReports} className="styled-btn" style={styles.button}>

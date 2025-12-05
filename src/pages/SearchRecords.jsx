@@ -174,7 +174,6 @@ export default function SearchRecords() {
 
       <div style={styles.container}>
         <div style={styles.header}>Search Records</div>
-        <div style={styles.subHeader}>Query distributed data across Read Replicas (Node 2 & 3)</div>
 
         <form onSubmit={handleSearch} style={styles.form}>
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "16px" }}>
