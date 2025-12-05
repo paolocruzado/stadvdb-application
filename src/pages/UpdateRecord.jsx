@@ -226,7 +226,7 @@ export default function UpdateRecord() {
 
           <div style={styles.sectionTitle}>New Values</div>
 
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "16px" }}>
+          <div style={{ display: "grid", gridTemplateColumns: "1fr", gap: "16px" }}>
             <div style={styles.inputGroup}>
               <label style={styles.label}>Title</label>
               <input
@@ -238,18 +238,7 @@ export default function UpdateRecord() {
                 onChange={handleChange}
               />
             </div>
-            <div style={styles.inputGroup}>
-              <label style={styles.label}>Start Year</label>
-              <input
-                className="styled-input"
-                style={styles.input}
-                placeholder="Year"
-                name="startYear"
-                type="number"
-                value={updates.startYear}
-                onChange={handleChange}
-              />
-            </div>
+            
           </div>
 
           <div style={{ display: "grid", gridTemplateColumns: "2fr 1fr", gap: "16px" }}>
@@ -271,7 +260,6 @@ export default function UpdateRecord() {
                 style={styles.input}
                 placeholder="Mins"
                 name="runtimeMinutes"
-                type="number"
                 value={updates.runtimeMinutes}
                 onChange={handleChange}
               />
